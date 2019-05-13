@@ -1,0 +1,92 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import java.util.ArrayList?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="rootPane" fx:controller="sample.GameController" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="20" bottom="20"></Insets>
+            </padding>
+            <TextField fx:id="player1" promptText="Insert name player 1" onKeyReleased="#handleKeyReleased">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </TextField>
+            <Button fx:id="newGameButton" text="new game" textFill="darkgreen" onAction="#handleNewGameButton">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Button>
+            <TextField fx:id="player2" promptText="Insert name player 2" onKeyReleased="#handleKeyReleased">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </TextField>
+        </HBox>
+    </top>
+    <center>
+        <GridPane alignment="CENTER">
+            <Button fx:id="crossCircleButton1" GridPane.rowIndex="0" GridPane.columnIndex="0" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton2" GridPane.rowIndex="0" GridPane.columnIndex="1" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton3" GridPane.rowIndex="0" GridPane.columnIndex="2" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton4" GridPane.rowIndex="1" GridPane.columnIndex="0" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton5" GridPane.rowIndex="1" GridPane.columnIndex="1" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton6" GridPane.rowIndex="1" GridPane.columnIndex="2" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton7" GridPane.rowIndex="2" GridPane.columnIndex="0" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton8" GridPane.rowIndex="2" GridPane.columnIndex="1" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <Button fx:id="crossCircleButton9" GridPane.rowIndex="2" GridPane.columnIndex="2" prefHeight="100" prefWidth="100"
+                    onAction="#handleCrossCircleButton"></Button>
+            <fx:define>
+                <ArrayList fx:id="buttonList" >
+                    <fx:reference source="crossCircleButton1"/>
+                    <fx:reference source="crossCircleButton2"/>
+                    <fx:reference source="crossCircleButton3"/>
+                    <fx:reference source="crossCircleButton4"/>
+                    <fx:reference source="crossCircleButton5"/>
+                    <fx:reference source="crossCircleButton6"/>
+                    <fx:reference source="crossCircleButton7"/>
+                    <fx:reference source="crossCircleButton8"/>
+                    <fx:reference source="crossCircleButton9"/>
+                </ArrayList>
+            </fx:define>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="20" bottom="20"></Insets>
+            </padding>
+            <Label fx:id="winnerLabel" textFill="darkgreen">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Label>
+            <TextField fx:id="winner" editable="false"></TextField>
+            <Button fx:id="resetButton" text="reset" textFill="darkgreen" onAction="#reset">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Button>
+            <Button fx:id="backToMenuButton" text="back to menu" textFill="darkgreen" onAction="#handleBackToMenuButton">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>

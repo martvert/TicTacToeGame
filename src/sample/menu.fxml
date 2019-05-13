@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="rootPane" fx:controller="sample.MenuController" xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <VBox alignment="CENTER" spacing="8">
+            <Label text="Welcome to the Tic Tac Toe Game!" textFill="crimson">
+                <font>
+                    <Font name="Impact" size="24"></Font>
+                </font>
+                <padding>
+                    <Insets bottom="40"></Insets>
+                </padding>
+            </Label>
+            <Button fx:id="gameButton" text="Game" textFill="mediumvioletred" onAction="#handleGameButton">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Button>
+            <Button text="History" textFill="mediumvioletred">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Button>
+            <Button fx:id="exitButton" text="Exit" textFill="mediumvioletred" onAction="#handleExitButton">
+                <font>
+                    <Font name="Impact" size="16"></Font>
+                </font>
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>
